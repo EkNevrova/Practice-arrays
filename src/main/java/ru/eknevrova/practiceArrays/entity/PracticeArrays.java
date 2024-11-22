@@ -19,7 +19,7 @@ public class PracticeArrays {
         int count = 0;
         for (int element : arr) {
             if (element % 2 == 0) {
-                count += 1;
+                count++;
             }
         }
         System.out.println("1. количество чётных чисел в массиве: " + count);
@@ -29,7 +29,7 @@ public class PracticeArrays {
         int count = 0;
         for (int element : arr) {
             if (element % 2 != 0) {
-                count += 1;
+                count++;
             }
         }
         System.out.println("2. количество нечётных чисел в массиве: " + count);
@@ -37,15 +37,17 @@ public class PracticeArrays {
 
     public void countPrimeNumbers (int[] arr) {
         int count = 0;
-        for (int index=0; index < arr.length; index++) {
-            if (arr[index] > 1) {
-                if (arr[index] == 2) {
-                    count = count + 1;
-                    System.out.println(arr[index]);
+        for (int element : arr) {
+            if (element > 1) {
+                if (element == 2) {
+                    count++;
+                    System.out.println(element);
                 }
-                if (arr[index] != 2 && arr[index] % 2 != 0 || arr[index] % 3 != 0 || arr[index] % 10 != 0) {
-                    count = count + 1;
-                    System.out.println(arr[index]);
+                for (int i = 2; i <= Math.sqrt(element); i++) {
+                    if (element % i != 0) {
+                        count++;
+                        System.out.println(element);
+                    }
                 }
             }
         }
