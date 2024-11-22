@@ -39,15 +39,15 @@ public class PracticeArrays {
         int count = 0;
         for (int element : arr) {
             if (element > 1) {
-                if (element == 2) {
-                    count++;
-                    System.out.println(element);
-                }
+                boolean isPrime = true;
                 for (int i = 2; i <= Math.sqrt(element); i++) {
-                    if (element % i != 0) {
-                        count++;
-                        System.out.println(element);
+                    if (element % i == 0) {
+                        isPrime = false;
+                        break;
                     }
+                }
+                if (isPrime) {
+                    count++;
                 }
             }
         }
