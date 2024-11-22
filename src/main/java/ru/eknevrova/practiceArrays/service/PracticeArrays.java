@@ -1,4 +1,4 @@
-package ru.eknevrova.practiceArrays.entity;
+package ru.eknevrova.practiceArrays.service;
 
 import java.util.Arrays;
 

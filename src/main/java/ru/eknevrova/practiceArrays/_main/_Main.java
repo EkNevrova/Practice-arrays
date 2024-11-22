@@ -1,4 +1,4 @@
-import ru.eknevrova.practiceArrays.entity.PracticeArrays;
+import ru.eknevrova.practiceArrays.service.PracticeArrays;
 
 public class _Main {
     public static void main(String[] args) {
